@@ -5,11 +5,11 @@ close all
 A = imread("Lab_03_image1_dark.tif");
 L = imread("Lab_03_image2_light.tif");
 
-figure();
+figure("Name", "image1_dark");
 imshow(A);
 newnew = equalize(A);
 
-% figure();
+% figure("Name", "image1_light");
 % imshow(L);
 % newt = equalize(L);
 

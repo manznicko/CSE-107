@@ -5,13 +5,13 @@ close all
 A = imread("Lab_03_image1_dark.tif");
 L = imread("Lab_03_image2_light.tif");
 
-figure();
+figure("Name", "");
 imshow(A);
 newnew = equalize(A);
 
-% figure();
-% imshow(L);
-% newt = equalize(L);
+figure();
+imshow(L);
+newt = equalize(L);
 
 % B = compute_histogram(A); %Is the hist vector
 % M = compute_histogram(L);

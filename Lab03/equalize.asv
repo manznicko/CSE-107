@@ -4,6 +4,12 @@ function [I] = equalize(img)
 	img_hist = compute_histogram(img);
 	plot_histogram(img_hist);
 	T = histogram_transform(img_hist);
+
+    fprintf("The mean of input image: ")
+    av = mean(img, "All")
+
+    fprintf("The sd of input image: ")
+    sd = 
 	
 	[row col] = size(img);
 	I = zeros(row,col);
@@ -16,6 +22,8 @@ function [I] = equalize(img)
 	end
 	figure;
 	imshow(I);
+    fprintf("The mean of equalized image: ")
+    av = mean(I, "All")
 	
 	C = compute_histogram(I);
 	plot_histogram(C); 

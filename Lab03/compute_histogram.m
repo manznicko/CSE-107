@@ -1,7 +1,20 @@
 function [vec] = compute_histogram(img)
-%COMPUTE_HISTOGRAM Summary of this function goes here
-%   Detailed explanation goes here
-% 3/29
+%COMPUTE_HISTOGRAM Summary of this function goes here:
+%     Takes in a greyscale image matrix and computes a noralized histogram of the image.
+
+% Syntax:
+%     out = compute_histogram(in);
+
+% Input:
+%     in = the matrix of a greyscale image. It should be of type uint8 and have values that range from 0-255
+
+% Output:
+%     out = a vector of length 256 that contains the normalized values of the input image. Values should range from 0-1
+%         and the sum of the elements should equal 1.
+
+%   History:
+%   3/29 - Started/Completed the function compute_histogram 
+test
     vec = zeros(256, 1);
     [row, col] = size(img);
     for i=1:row

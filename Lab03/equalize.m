@@ -1,6 +1,19 @@
 function [I] = equalize(img)
 %EQUALIZE Summary of this function goes here
-%   Detailed explanation goes here
+% 	This function takes in a greyscale image matrix and utilizes compute_histogram, plot_histogram, and histogram_transform
+% 	order to create a new equalized image. Additionally, this function computes the mean and standard deviations of both the input
+% 	and output images and prints the values to the terminal.
+
+% Syntax:
+% 	out = equalize(in);
+% Input:
+% 	in = the matrix of a greyscale image. It should be of type uint8 and have values that range from 0-255
+% Output:
+% 	out = the matrix the new equalized greyscale image. It should be of type uint8 and have values that range from 0-255
+% History:
+% 	4/5 Started writing the function. Implemented the call of histogram compute, plot, and transform
+% 	4/6 Completed function after adding image mean/standard deviatians
+	
 	img_hist = compute_histogram(img);
 	plot_histogram(img_hist);
 	T = histogram_transform(img_hist);

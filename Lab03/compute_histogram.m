@@ -14,7 +14,7 @@ function [vec] = compute_histogram(img)
 
 %   History:
 %   3/29 - Started/Completed the function compute_histogram 
-test
+
     vec = zeros(256, 1);
     [row, col] = size(img);
     for i=1:row

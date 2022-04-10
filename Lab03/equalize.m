@@ -22,7 +22,7 @@ function [I] = equalize(img)
     av = mean(img, "All")
 
     fprintf("The sd of input image: ")
-    sd = mean(std(double(img)), "all")
+    sd = std(double(img(:)))
 	
 	[row col] = size(img);
 	I = zeros(row,col);
@@ -38,13 +38,9 @@ function [I] = equalize(img)
     fprintf("The mean of equalized image: ")
     av = mean(I, "All")
     fprintf("The sd of equalized image: ")
-    sd = mean(std(double(I)), "all")
+    sd = std(double(I(:)))
 	
 	C = compute_histogram(I);
 	plot_histogram(C); 
-	
-    
-	%Still gotta compute mean and SD of old and new image
-    
 end
 

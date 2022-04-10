@@ -8,10 +8,12 @@ L = imread("Lab_03_image2_light.tif");
 figure("Name", "image1_dark");
 imshow(A);
 newnew = equalize(A);
+imwrite(newnew, "iamge_dark_equalized.png");
 
-% figure("Name", "image1_light");
-% imshow(L);
-% newt = equalize(L);
+figure("Name", "image1_light");
+imshow(L);
+newt = equalize(L);
+imwrite(newt, "iamge_light_equalized.png");
 
 % B = compute_histogram(A); %Is the hist vector
 % M = compute_histogram(L);

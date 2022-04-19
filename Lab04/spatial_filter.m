@@ -19,8 +19,7 @@ for m=1:row
     for n=1:col
         for s=1:R
             for t=1:S
-                display(m,n,s,t,m+s,n+t);
-                mat(m,n) = m(m,n) + sobel(s,t)*pad_input(m+s-1,n+t-1);
+                mat(m,n) = mat(m,n) + sobel(s,t)*pad_input(m+s-1,n+t-1);
             end
         end
     end

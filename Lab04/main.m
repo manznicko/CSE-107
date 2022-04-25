@@ -16,3 +16,8 @@ edges = find_edges(A, 200);
 figure("Name", "Edges Detected");
 imshow(edges);
 imwrite(edges, "watertower_edges.png");
+
+Canny = edge(A, 'canny');
+figure("Name", "Canny Edge Detection");
+imshow(Canny);
+imwrite(Canny, "Canny Edge Detection.png");

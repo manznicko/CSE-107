@@ -1,5 +1,19 @@
 function [grad] = gradient_magnitude(input)
 % GRADIENT MAGNITUDE Summary of this function goes here:
+%     This function takes in single arguement, an image matrix
+%     and calculates the gradient using two filters.
+% Syntax:
+%     out = gradient_magnitude(ipnut_matrix);
+
+% Input:
+%     input_matrix =  any n x m matrix that represents a greyscale image
+%     where the elements are values from 0-255.
+
+% History:
+%     4/12 - Started function implementation, Initilized output matrix and filters
+%     4/19 - Finished function implementaton
+    
+    
 [M,N] = size(input);
 grad = zeros(M,N);
 

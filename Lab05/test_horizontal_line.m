@@ -3,6 +3,7 @@
 
 clear all;
 close all;
+clc
 
 % Create a blank image.
 size_x = 100;
